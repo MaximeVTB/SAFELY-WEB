@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>SAFELY — Le bracelet qui alerte avant que vous puissiez parler</title>
+  <meta name="description" content="SAFELY est un bracelet de sécurité connecté : pic de stress, chute, geste discret. Il alerte votre cercle de confiance avec votre position exacte, même sans téléphone.">
+  <meta name="theme-color" content="#F3EFE6">
+  <link rel="icon" href="assets/safely-logo.png">
+
+  <meta property="og:title" content="SAFELY — Le pouls monte. La chute arrive. L'alerte part.">
+  <meta property="og:description" content="Un bracelet connecté qui reconnaît l'urgence et prévient vos proches — même sans téléphone.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+  <noscript><style>.tabs{display:none}#panel-auto[hidden]{display:block!important}</style></noscript>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Aller au contenu</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- ============================= NAV ============================= -->
+  <header class="nav" id="siteNav">
+    <div class="wrap nav__inner">
+      <a href="#top" class="brand" aria-label="SAFELY — retour en haut">
+        <img src="assets/safely-logo.png" alt="" width="26" height="30" decoding="async">
+        <span class="brand__word">SAFELY</span>
+        <span class="brand__meta">Sécurité portée</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#bracelet">Le bracelet</a>
+        <a href="#technologie">Technologie</a>
+        <a href="#fonctionnement">Fonctionnement</a>
+        <a href="#application">Application</a>
+        <a href="#engagement">Engagement</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="#precommande" class="nav__cta">
+          Précommander
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M2.5 8h11M9.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Ouvrir le menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav__mobile" id="mobileMenu" hidden>
+      <nav class="wrap nav__mobile-inner" aria-label="Navigation mobile">
+        <a href="#bracelet"><span>01</span>Le bracelet</a>
+        <a href="#technologie"><span>02</span>Technologie</a>
+        <a href="#fonctionnement"><span>03</span>Fonctionnement</a>
+        <a href="#application"><span>04</span>Application</a>
+        <a href="#engagement"><span>05</span>Engagement</a>
+        <a href="#faq"><span>06</span>FAQ</a>
+        <a href="#precommande" class="nav__mobile-cta">Rejoindre la liste d'attente →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ============================= HERO ============================= -->
+    <section class="hero" id="top">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="kicker kicker--hero">Bracelet de sécurité connecté <span class="kicker__edition">Édition 01</span></p>
+
+          <h1 class="hero__title">
+            Le pouls monte.<br>
+            La chute arrive.<br>
+            <em>L'alerte part.</em>
+          </h1>
+
+          <p class="hero__lead">
+            SAFELY lit le signal avant que vous puissiez parler, puis transmet votre position
+            exacte à votre cercle de confiance. Sans téléphone, sans mot de passe,
+            sans attendre.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#bracelet" class="btn btn--solid">
+              Découvrir le bracelet
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2.5 8h11M9.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#fonctionnement" class="link-arrow">
+              Voir la séquence d'alerte
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4 12 12 4M5.5 4H12v6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <dl class="hero__facts">
+            <div>
+              <dt>GPS</dt>
+              <dd>Précision 3 m</dd>
+            </div>
+            <div>
+              <dt>eSIM</dt>
+              <dd>Réseau autonome</dd>
+            </div>
+            <div>
+              <dt>Annulation</dt>
+              <dd>D'une pression</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="hero__aside" aria-label="Exemple de journal d'alerte">
+          <div class="console">
+            <div class="console__bar">
+              <span class="mono">Journal d'alerte</span>
+              <span class="mono">Exemple · 20:47</span>
+            </div>
+
+            <div class="console__headline">
+              <p class="console__time">11<span>s</span></p>
+              <p class="console__note">entre le pic de stress et l'alerte transmise.</p>
+            </div>
+
+            <ol class="log">
+              <li>
+                <time datetime="20:47:03">20:47:03</time>
+                <span>Pic cardiaque détecté — 112 bpm</span>
+                <em>PPG</em>
+              </li>
+              <li>
+                <time datetime="20:47:05">20:47:05</time>
+                <span>Immobilité inhabituelle</span>
+                <em>IMU</em>
+              </li>
+              <li>
+                <time datetime="20:47:08">20:47:08</time>
+                <span>Compte à rebours — 10 secondes</span>
+                <em>Haptique</em>
+              </li>
+              <li class="log__final">
+                <time datetime="20:47:14">20:47:14</time>
+                <span>Alerte et position transmises à 3 proches</span>
+                <em>eSIM</em>
+              </li>
+            </ol>
+
+            <div class="console__foot">
+              <p class="mono">48.8584° N — 2.2945° E</p>
+              <p class="mono">Précision 3 m · chiffré de bout en bout</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="ledger" aria-label="Principes du bracelet">
+      <div class="wrap ledger__grid">
+        <p>Sans téléphone requis</p>
+        <p>Position chiffrée</p>
+        <p>Alerte annulable</p>
+        <p>Porté jour et nuit</p>
+        <p>Reconnaissance du signal</p>
+      </div>
+    </div>
+
+    <!-- ============================= 01 · LE BRACELET ============================= -->
+    <section class="section" id="bracelet">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="kicker"><span>01</span> Le bracelet</p>
+            <h2 class="h2">On l'oublie.<br><em>Jusqu'au moment où il compte.</em></h2>
+          </div>
+          <p class="lead">
+            SAFELY ne ressemble pas à un objet de sécurité — et c'est exactement le but.
+            Un profil fin, une finition douce, un bracelet qu'on garde au poignet comme un
+            bijou : du matin au soir, sous une manche, en réunion, dans la rue, en pleine nuit.
+          </p>
+        </div>
+
+        <div class="sheet">
+          <figure class="sheet__drawing">
+            <svg class="drawing" viewBox="0 0 540 400" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="dwg-title dwg-desc">
+              <title id="dwg-title">Plan technique du bracelet SAFELY</title>
+              <desc id="dwg-desc">Vue de dessus : sangle, module central, capteur optique et repères de dimensions.</desc>
+
+              <rect x="66" y="150" width="388" height="176" rx="88" stroke-width="1.2"/>
+              <rect x="94" y="178" width="332" height="120" rx="60" stroke-width="1.2"/>
+
+              <path d="M260 118v-14M260 358v14M40 238h-14M476 238h14" stroke-width="1" stroke-dasharray="2 5" opacity=".45"/>
+
+              <rect x="196" y="106" width="128" height="80" rx="22" fill="var(--paper-2)" stroke-width="1.4"/>
+              <rect x="208" y="118" width="104" height="56" rx="13" stroke-width="1"/>
+              <path d="M218 146h16l6-13 8 24 6-16 4 5h50" stroke-width="1.5"/>
+
+              <circle cx="221" cy="160" r="2.6" stroke-width="1.2"/>
+              <circle cx="233" cy="160" r="2.6" stroke-width="1.2"/>
+
+              <path d="M196 92v-12M324 92v-12" stroke-width="1"/>
+              <path d="M196 86h128" stroke-width="1" opacity=".55"/>
+
+              <path d="M474 150v176" stroke-width="1" opacity=".55"/>
+              <path d="M470 156l4-6 4 6M470 320l4 6 4-6" stroke-width="1"/>
+
+              <path d="M112 164v-10M128 160v-10M144 157v-10" stroke-width="1" opacity=".5"/>
+
+              <text x="260" y="76" text-anchor="middle" class="drawing__label" stroke="none">38 MM</text>
+              <text x="498" y="238" text-anchor="middle" class="drawing__label" stroke="none" transform="rotate(90 498 238)">9,8 MM</text>
+            </svg>
+
+            <figcaption class="sheet__caption">
+              <span class="mono">Vue de dessus</span>
+              <span class="mono">Proportions indicatives</span>
+            </figcaption>
+          </figure>
+
+          <div class="sheet__list">
+            <article class="trait">
+              <span class="trait__idx mono">01</span>
+              <div>
+                <h3>Discret par nature</h3>
+                <p>Un format épuré qui se glisse sous une manche et n'annonce jamais « je suis en danger ».</p>
+              </div>
+            </article>
+
+            <article class="trait">
+              <span class="trait__idx mono">02</span>
+              <div>
+                <h3>Élégant au quotidien</h3>
+                <p>Bracelet interchangeable, finitions mates : du bureau à la salle de sport, sans changer de poignet.</p>
+              </div>
+            </article>
+
+            <article class="trait">
+              <span class="trait__idx mono">03</span>
+              <div>
+                <h3>Ergonomique</h3>
+                <p>Léger, sans angle, pensé pour être porté 24 h/24 — même le poignet posé sur l'oreiller.</p>
+              </div>
+            </article>
+
+            <article class="trait">
+              <span class="trait__idx mono">04</span>
+              <div>
+                <h3>Résistant</h3>
+                <p>Conçu pour les chocs, la transpiration, la pluie et la vraie vie — pas pour une vitrine.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="spec-strip">
+          <span>Module 38 × 42 mm</span>
+          <span>Épaisseur 9,8 mm</span>
+          <span>Sangle 18 mm</span>
+          <span>Étanchéité au quotidien</span>
+          <span>Recharge magnétique</span>
+          <span class="spec-strip__note">Spécifications indicatives</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 02 · TECHNOLOGIE ============================= -->
+    <section class="section section--ink" id="technologie">
+      <div class="wrap">
+        <div class="sec-head sec-head--ink">
+          <div>
+            <p class="kicker"><span>02</span> Technologie embarquée</p>
+            <h2 class="h2">Six composants.<br><em>Une seule mission : agir avant.</em></h2>
+          </div>
+          <p class="lead">
+            SAFELY croise en permanence ce que votre corps ressent et ce que votre
+            environnement signale. Résultat : un système capable de comprendre l'urgence —
+            sans jamais confondre un effort avec une détresse.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="specs">
+            <caption class="sr-only">Composants embarqués dans le bracelet SAFELY</caption>
+            <thead>
+              <tr>
+                <th scope="col">Composant</th>
+                <th scope="col">Ce qu'il capte</th>
+                <th scope="col">Ce que ça change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <span class="specs__idx mono">01</span>
+                  <span class="specs__name">Capteur PPG</span>
+                  <span class="specs__tag mono">Biométrie</span>
+                </th>
+                <td data-label="Ce qu'il capte">Fréquence cardiaque mesurée en continu, au repos comme à l'effort.</td>
+                <td data-label="Ce que ça change">Un pic brutal, hors effort et hors émotion connue, devient un signal que SAFELY prend au sérieux.</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="specs__idx mono">02</span>
+                  <span class="specs__name">Accéléromètre</span>
+                  <span class="specs__tag mono">Mouvement</span>
+                </th>
+                <td data-label="Ce qu'il capte">Chute, impact soudain, immobilisation inhabituelle.</td>
+                <td data-label="Ce que ça change">Le mouvement raconte l'accident avant même que vous puissiez parler.</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="specs__idx mono">03</span>
+                  <span class="specs__name">Bouton &amp; zones tactiles</span>
+                  <span class="specs__tag mono">Contrôle</span>
+                </th>
+                <td data-label="Ce qu'il capte">Appui long sur le bouton ou sur une zone dédiée.</td>
+                <td data-label="Ce que ça change">Une alerte discrète, la main dans la poche, sans déverrouiller un téléphone.</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="specs__idx mono">04</span>
+                  <span class="specs__name">Bluetooth Low Energy</span>
+                  <span class="specs__tag mono">Connectivité</span>
+                </th>
+                <td data-label="Ce qu'il capte">Lien permanent avec votre téléphone, à très basse consommation.</td>
+                <td data-label="Ce que ça change">Synchronise le cercle de confiance, les trajets et l'état du bracelet — sans vider la batterie.</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="specs__idx mono">05</span>
+                  <span class="specs__name">GPS haute précision</span>
+                  <span class="specs__tag mono">Localisation</span>
+                </th>
+                <td data-label="Ce qu'il capte">Position transmise en temps réel, précision de 3 m en zone dégagée.</td>
+                <td data-label="Ce que ça change">Vos proches ne reçoivent pas seulement une alerte : ils voient où agir.</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <span class="specs__idx mono">06</span>
+                  <span class="specs__name">GSM &amp; eSIM</span>
+                  <span class="specs__tag mono">Autonomie réseau</span>
+                </th>
+                <td data-label="Ce qu'il capte">Appels et SMS d'urgence envoyés directement depuis le poignet.</td>
+                <td data-label="Ce que ça change">Fonctionne même si votre téléphone est loin, éteint ou déchargé.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="table-note mono">Spécifications indicatives, susceptibles d'évoluer avant commercialisation.</p>
+      </div>
+    </section>
+
+    <!-- ============================= 03 · FONCTIONNEMENT ============================= -->
+    <section class="section" id="fonctionnement">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="kicker"><span>03</span> Fonctionnement</p>
+            <h2 class="h2">Deux façons de donner l'alerte.<br><em>Une seule promesse : ne jamais rester seul(e).</em></h2>
+          </div>
+          <p class="lead">
+            Parfois on sait qu'il faut appeler à l'aide. Parfois on ne le peut pas.
+            SAFELY fonctionne dans les deux cas — avec la même vitesse, et toujours avec
+            la possibilité d'annuler.
+          </p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Modes de déclenchement">
+          <button type="button" class="tab is-active" id="tab-manual" role="tab" aria-selected="true" aria-controls="panel-manual">
+            <span class="tab__idx mono">A</span> Je déclenche
+          </button>
+          <button type="button" class="tab" id="tab-auto" role="tab" aria-selected="false" aria-controls="panel-auto" tabindex="-1">
+            <span class="tab__idx mono">B</span> SAFELY déclenche
+          </button>
+        </div>
+
+        <div id="panel-manual" role="tabpanel" aria-labelledby="tab-manual" tabindex="0">
+          <div class="mode">
+            <ol class="steps">
+              <li class="step">
+                <span class="step__num mono">01</span>
+                <div>
+                  <h3>Pression discrète</h3>
+                  <p>Un appui long sur le bouton ou sur une zone tactile dédiée. Aucun écran à déverrouiller, aucune voix à lever : personne autour de vous ne remarque rien.</p>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step__num mono">02</span>
+                <div>
+                  <h3>Compte à rebours annulable</h3>
+                  <p>Le bracelet vibre et vous laisse quelques secondes pour annuler si c'était un geste maladroit. Pas de faux départ, pas d'alerte inutile.</p>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step__num mono">03</span>
+                <div>
+                  <h3>Alerte + position live</h3>
+                  <p>Appel et SMS partent vers votre cercle de confiance avec un lien de suivi. Vos proches savent où vous êtes, en direct — pas seulement que quelque chose ne va pas.</p>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step__num mono">04</span>
+                <div>
+                  <h3>Relais jusqu'à la levée de doute</h3>
+                  <p>L'application indique qui a répondu, à quelle heure, et qui arrive. Vous n'êtes plus seule avec l'urgence : vous êtes attendue.</p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="panel">
+              <div class="panel__top">
+                <span class="mono">Séquence manuelle</span>
+                <span class="live mono"><i></i>En cours</span>
+              </div>
+
+              <div class="countdown">
+                <span class="countdown__num">10</span>
+                <span class="countdown__label">secondes<br>pour annuler</span>
+              </div>
+              <div class="countdown__bar" aria-hidden="true"><i style="width:34%"></i></div>
+
+              <dl class="panel__facts">
+                <div><dt>Déclencheur</dt><dd>Appui long · zone tactile</dd></div>
+                <div><dt>Annulation</dt><dd>Une simple pression</dd></div>
+                <div><dt>Canal</dt><dd>eSIM · SMS + position</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-auto" role="tabpanel" aria-labelledby="tab-auto" tabindex="0" hidden>
+          <div class="mode">
+            <ol class="steps">
+              <li class="step">
+                <span class="step__num mono">01</span>
+                <div>
+                  <h3>Analyse continue</h3>
+                  <p>PPG et accéléromètre travaillent ensemble, en permanence. SAFELY apprend votre rythme au repos, à l'effort, dans les transports, pendant votre sommeil.</p>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step__num mono">02</span>
+                <div>
+                  <h3>Détection d'une anomalie</h3>
+                  <p>Pic cardiaque brutal sans raison, chute, choc violent, immobilité anormale : le bracelet reconnaît la combinaison qui ne ressemble à rien de normal.</p>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step__num mono">03</span>
+                <div>
+                  <h3>Confirmation silencieuse</h3>
+                  <p>Une vibration, un compte à rebours, une pression suffit pour dire « ça va ». Vous gardez la main, même quand votre corps ne le peut pas.</p>
+                </div>
+              </li>
+              <li class="step">
+                <span class="step__num mono">04</span>
+                <div>
+                  <h3>Alerte automatique</h3>
+                  <p>Sans réponse de votre part, le bracelet envoie l'alerte et votre position via l'eSIM — même si votre téléphone est loin, éteint ou déchargé.</p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="panel">
+              <div class="panel__top">
+                <span class="mono">Signaux concordants</span>
+                <span class="live mono"><i></i>Analyse</span>
+              </div>
+
+              <div class="signal">
+                <div class="signal__row">
+                  <span class="signal__name mono">PPG</span>
+                  <span class="signal__bars" aria-hidden="true">
+                    <i style="--h:26%"></i><i style="--h:38%"></i><i style="--h:24%"></i><i style="--h:34%"></i><i style="--h:46%"></i><i class="is-alert" style="--h:94%"></i><i class="is-alert" style="--h:68%"></i>
+                  </span>
+                  <span class="signal__value mono">112 bpm</span>
+                </div>
+                <div class="signal__row">
+                  <span class="signal__name mono">IMU</span>
+                  <span class="signal__bars" aria-hidden="true">
+                    <i style="--h:18%"></i><i style="--h:28%"></i><i style="--h:22%"></i><i class="is-alert" style="--h:86%"></i><i style="--h:16%"></i><i style="--h:12%"></i><i style="--h:9%"></i>
+                  </span>
+                  <span class="signal__value mono">2,4 g</span>
+                </div>
+              </div>
+
+              <p class="panel__caption">Deux signaux concordants dans la même seconde : SAFELY comprend qu'il s'agit d'une urgence, pas d'un sprint.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="assurance">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3.5 5 6.3v5.9c0 4.5 3 8 7 9.3 4-1.3 7-4.8 7-9.3V6.3L12 3.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="m8.9 12.3 2.1 2.1 4.2-4.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <h3>Toujours une chance d'annuler</h3>
+            <p>Chaque alerte, manuelle ou automatique, passe par un compte à rebours annulable d'une pression. Vous déclenchez dans le doute — et vous reprenez la main en une seconde.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 04 · APPLICATION ============================= -->
+    <section class="section section--paper2" id="application">
+      <div class="wrap">
+        <div class="app-grid">
+          <div class="phone-stage" role="img" aria-label="Aperçu de l'application SAFELY : tableau de bord, carte de suivi et cercle de confiance">
+            <div class="phone">
+              <div class="phone__screen">
+                <div class="app-top">
+                  <span class="mono">SAFELY</span>
+                  <span class="app-live mono"><i></i>Actif</span>
+                </div>
+
+                <p class="app-hi">Bonsoir,<br>Lina.</p>
+
+                <div class="app-map">
+                  <svg viewBox="0 0 260 150" aria-hidden="true" fill="none">
+                    <path d="M18 126c30-16 44-48 70-50s38 26 62 12 34-40 82-58" stroke="currentColor" stroke-width="1.6" stroke-dasharray="1 6" stroke-linecap="round"/>
+                    <circle cx="232" cy="30" r="4" fill="currentColor"/>
+                    <circle cx="232" cy="30" r="9" stroke="currentColor" stroke-width=".8" opacity=".35"/>
+                  </svg>
+                  <span class="app-map__tag mono">Partage · 12 min</span>
+                </div>
+
+                <div class="app-status">
+                  <span class="app-status__dot" aria-hidden="true"></span>
+                  <div>
+                    <p>Tout va bien</p>
+                    <em>Position partagée avec 3 proches</em>
+                  </div>
+                  <span class="mono">Live</span>
+                </div>
+
+                <div class="app-circle">
+                  <p class="mono">Cercle de confiance</p>
+                  <div class="app-avatars">
+                    <span style="--av:#B0432B">MA</span>
+                    <span style="--av:#3E4C3E">JD</span>
+                    <span style="--av:#8C6A4A">SO</span>
+                    <span class="is-add">+</span>
+                  </div>
+                </div>
+
+                <div class="app-cta">Déclencher une alerte</div>
+              </div>
+            </div>
+
+            <p class="annotation annotation--a mono">Alerte reçue · 20:47</p>
+            <p class="annotation annotation--b mono">Trajet sécurisé · arrivée ✓</p>
+          </div>
+
+          <div class="app-copy">
+            <div class="sec-head sec-head--stack">
+              <div>
+                <p class="kicker"><span>04</span> L'application</p>
+                <h2 class="h2">Le bracelet protège.<br><em>L'application coordonne.</em></h2>
+              </div>
+              <p class="lead">
+                Votre cercle de confiance, votre position, vos trajets : tout est dans une
+                interface simple et lisible, pensée pour les moments où personne n'a le temps
+                de chercher.
+              </p>
+            </div>
+
+            <ol class="features">
+              <li class="feature">
+                <span class="feature__idx mono">01</span>
+                <div>
+                  <h3>Votre cercle de confiance</h3>
+                  <p>Choisissez qui est prévenu, dans quel ordre et par quel canal. Ajoutez, retirez, réorganisez à tout moment — c'est votre réseau, pas le nôtre.</p>
+                </div>
+              </li>
+              <li class="feature">
+                <span class="feature__idx mono">02</span>
+                <div>
+                  <h3>Signaux reçus en temps réel</h3>
+                  <p>Alerte instantanée, carte live, horodatage des positions : vos proches savent exactement où agir.</p>
+                </div>
+              </li>
+              <li class="feature">
+                <span class="feature__idx mono">03</span>
+                <div>
+                  <h3>Itinéraires sécurisés</h3>
+                  <p>Partagez un trajet et laissez l'application veiller. Si vous déviez du parcours, ou si vous ne confirmez pas votre arrivée, le cercle est prévenu.</p>
+                </div>
+              </li>
+              <li class="feature">
+                <span class="feature__idx mono">04</span>
+                <div>
+                  <h3>Mode discrétion</h3>
+                  <p>Notifications silencieuses, interface neutre, aucun son. Personne autour de vous n'a besoin de savoir ce que votre poignet fait pour vous.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 05 · ENGAGEMENT ============================= -->
+    <section class="section section--ink" id="engagement">
+      <div class="wrap">
+        <div class="sec-head sec-head--ink">
+          <div>
+            <p class="kicker"><span>05</span> Notre engagement</p>
+            <h2 class="h2">La sécurité ne devrait<br><em>jamais être un privilège.</em></h2>
+          </div>
+          <p class="lead">
+            SAFELY est né d'un constat simple : personne ne devrait avoir à choisir entre sa
+            liberté et sa tranquillité. Nous construisons un objet du quotidien — pas un
+            gadget de peur.
+          </p>
+        </div>
+
+        <div class="manifesto">
+          <blockquote class="quote">
+            <p>« Une alerte ne sert à rien si elle arrive trop tard. Notre obsession, c'est l'écart entre la seconde où tout bascule et la seconde où quelqu'un peut enfin agir. »</p>
+            <footer class="mono">L'équipe SAFELY</footer>
+          </blockquote>
+
+          <ol class="principles">
+            <li class="principle">
+              <span class="principle__idx mono">01</span>
+              <div>
+                <h3>Vie privée par défaut</h3>
+                <p>Position chiffrée, aucune revente de données, aucune publicité, aucun profilage publicitaire. Votre localisation n'appartient qu'à vous et aux personnes que vous autorisez.</p>
+              </div>
+            </li>
+            <li class="principle">
+              <span class="principle__idx mono">02</span>
+              <div>
+                <h3>Consentement, toujours</h3>
+                <p>Vous décidez qui reçoit quoi, et quand. Chaque alerte reste annulable, chaque partage de position peut être arrêté d'une pression.</p>
+              </div>
+            </li>
+            <li class="principle">
+              <span class="principle__idx mono">03</span>
+              <div>
+                <h3>Pensé pour toutes et tous</h3>
+                <p>Toutes morphologies, tous âges, tous quotidiens : sortir de soirée, rentrer du travail à pied, veiller sur un proche, vivre seul(e) sans se sentir seul(e).</p>
+              </div>
+            </li>
+            <li class="principle">
+              <span class="principle__idx mono">04</span>
+              <div>
+                <h3>Transparence radicale</h3>
+                <p>Ce que le bracelet mesure, pourquoi, et surtout ce qu'il n'enregistre pas : nous l'expliquons sans détour, en français simple, avant l'achat.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= 06 · FAQ ============================= -->
+    <section class="section" id="faq">
+      <div class="wrap faq-grid">
+        <div class="sec-head sec-head--sticky">
+          <div>
+            <p class="kicker"><span>06</span> Questions fréquentes</p>
+            <h2 class="h2">Ce qu'on nous<br><em>demande le plus.</em></h2>
+            <p class="lead">Une question qui n'est pas là ? Écrivez-nous, on répond en français, sans jargon.</p>
+            <a href="mailto:bonjour@safely.example" class="link-arrow link-arrow--static">Nous contacter</a>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq">
+            <summary>Et si je n'ai pas de réseau ?<span class="faq__sign" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              <p>Le bracelet continue de fonctionner en local : il vibre, détecte et enregistre l'alerte. Dès qu'une couverture revient, l'eSIM transmet l'alerte et la dernière position connue. En parallèle, votre cercle de confiance reçoit les informations issues du GPS et du Bluetooth dès qu'ils redeviennent disponibles.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>Et si mon téléphone est loin, éteint ou déchargé ?<span class="faq__sign" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              <p>C'est précisément pour ça que la puce GSM / eSIM est intégrée au bracelet. Les appels et SMS d'urgence partent depuis le poignet, avec votre position — sans dépendre de votre téléphone.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>Les alertes peuvent-elles partir par erreur ?<span class="faq__sign" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              <p>Chaque alerte, manuelle ou automatique, passe par un compte à rebours annulable d'une pression. Vous pouvez déclencher dans le doute sans transformer un geste maladroit en intervention inutile. Le cercle de confiance est également informé si vous annulez.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>Qui voit mes données de santé et ma position ?<span class="faq__sign" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              <p>Uniquement les personnes que vous avez ajoutées à votre cercle de confiance, et seulement pendant le temps que vous avez choisi. Les données sont chiffrées, ne sont pas revendues, et ne servent à aucune publicité. Vous pouvez supprimer votre historique à tout moment.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>Le bracelet est-il confortable la nuit ?<span class="faq__sign" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              <p>Il a été dessiné pour être oublié : profil fin, absence d'angles, bracelet souple interchangeable. La détection nocturne reste active, en mode discret, sans notification lumineuse agressive.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>Quand sera-t-il disponible ?<span class="faq__sign" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              <p>SAFELY est actuellement en phase de conception avancée. Inscrivez-vous à la liste d'attente : vous recevrez les dates de précommande, les coloris disponibles et les offres de lancement avant tout le monde.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= CTA ============================= -->
+    <section class="cta" id="precommande">
+      <div class="wrap cta__grid">
+        <div>
+          <p class="kicker kicker--ink"><span>Liste d'attente</span> Ouverture prochaine</p>
+          <h2 class="h2">Recevez la date de précommande<br><em>avant tout le monde.</em></h2>
+
+          <form class="waitlist" id="waitlistForm" novalidate>
+            <label class="sr-only" for="waitlistEmail">Votre adresse email</label>
+            <input id="waitlistEmail" name="email" type="email" required placeholder="vous@exemple.fr" autocomplete="email">
+            <button type="submit" class="btn btn--paper">
+              Rejoindre la liste
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M2.5 8h11M9.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+
+          <p class="waitlist__note mono" id="waitlistNote" role="status" aria-live="polite">
+            Pas de spam : un email au lancement, un autre pour la précommande. Désinscription en un clic.
+          </p>
+        </div>
+
+        <div class="cta__meta">
+          <p class="mono cta__meta-title">Vous recevrez</p>
+          <ul>
+            <li><span class="mono">01</span> Les dates de précommande</li>
+            <li><span class="mono">02</span> Les coloris et finitions</li>
+            <li><span class="mono">03</span> Les offres de lancement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#top" class="brand brand--light" aria-label="SAFELY — retour en haut">
+            <img src="assets/safely-logo.png" alt="" width="26" height="30" decoding="async">
+            <span class="brand__word">SAFELY</span>
+          </a>
+          <p class="footer__tagline">La sécurité, portée avec élégance.</p>
+          <p class="footer__pledge">
+            Chaque année, des milliers de personnes traversent un moment où quelques secondes
+            changent tout. SAFELY existe pour ces secondes-là.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="SAFELY sur Instagram">Instagram <span aria-hidden="true">↗</span></a>
+            <a href="#" aria-label="SAFELY sur LinkedIn">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a href="#" aria-label="SAFELY sur TikTok">TikTok <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <nav aria-labelledby="foot-produit">
+          <h2 class="footer__heading mono" id="foot-produit">Produit</h2>
+          <ul class="footer__links">
+            <li><a href="#bracelet">Le bracelet</a></li>
+            <li><a href="#technologie">Technologie embarquée</a></li>
+            <li><a href="#fonctionnement">Comment ça marche</a></li>
+            <li><a href="#application">L'application</a></li>
+            <li><a href="#precommande">Précommander</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="foot-securite">
+          <h2 class="footer__heading mono" id="foot-securite">Sécurité</h2>
+          <ul class="footer__links">
+            <li><a href="#engagement">Notre engagement</a></li>
+            <li><a href="#faq">Fonctionnement des alertes</a></li>
+            <li><a href="#faq">Protection des données</a></li>
+            <li><a href="#faq">Questions fréquentes</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="foot-legal">
+          <h2 class="footer__heading mono" id="foot-legal">Informations</h2>
+          <ul class="footer__links">
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Conditions d'utilisation</a></li>
+            <li><a href="#">Cookies &amp; confidentialité</a></li>
+            <li><a href="#">Accessibilité</a></li>
+            <li><a href="mailto:bonjour@safely.example">Contact presse</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__emergency">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M12 7.6v5M12 16.2v.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <p>SAFELY complète les services d'urgence, il ne les remplace pas. <strong>En cas de danger immédiat, contactez les secours de votre pays (112 en Europe).</strong></p>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="mono">© <span id="year">2026</span> SAFELY — Tous droits réservés</p>
+        <p class="mono">Site de présentation · concept produit. Caractéristiques techniques, chiffres et visuels indicatifs, susceptibles d'évoluer avant commercialisation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=3" defer></script>
+</body>
+</html>
